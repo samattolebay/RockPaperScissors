@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/leva-eternity-149473.mp3-049594d72eb5f5f6cdb777247d4ed6f1.mp3str"
+
+[deps]
+
+source_file="res://audio/leva-eternity-149473.mp3"
+dest_files=[ "res://.import/leva-eternity-149473.mp3-049594d72eb5f5f6cdb777247d4ed6f1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

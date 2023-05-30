@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://art/rock.png" type="Texture" id=1]
 [ext_resource path="res://Rock.gd" type="Script" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
@@ -8,17 +7,20 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21, 20 )
+extents = Vector2( 20, 20 )
 
 [node name="Rock" type="RigidBody2D"]
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
+contacts_reported = 100
+contact_monitor = true
 linear_damp = 0.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 1 )
+scale = Vector2( 0.1, 0.1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Rock_body_entered"]
